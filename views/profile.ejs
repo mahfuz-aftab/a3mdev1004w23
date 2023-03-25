@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Github OAuth</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h1 class="fs-1">
+            <span class="fa fa-github"></span> Github Details 
+          </h1>
+        </div>
+
+        <div class="col-4 mt-5">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <img src="<%= userData.avatar_url %>" alt="avatar"
+                class="rounded-circle img-fluid" style="width: 150px;">
+              <h5 class="mt-3"><%= userData.name %></h5>
+              <h6 class="text-muted mb-0">@<%= userData.login %></h6>
+              <p class="text-muted mb-4"><%= userData.location %></p>
+
+              <div class="row mb-4">
+                <div class="col">Followers 
+                  <span class="badge bg-secondary"><%= userData.followers %></span>
+                </div>
+
+                <div class="col">Following 
+                  <span class="badge bg-secondary"><%= userData.following %></span>
+                </div>
+                
+                <div class="col-12 mt-3"><strong><%= userData.name %></strong> 
+                  got <span class="badge bg-secondary"><%= userData.public_repos %></span> Public Repos. 
+                  <!-- <span class="badge bg-secondary"><%= userData.public_repos %></span> -->
+                </div>
+              </div>
+
+              <button class="btn btn-danger">
+                <a href="/logout" class="text-decoration-none text-white">Logout</a>
+              </button>
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
