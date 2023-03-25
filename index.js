@@ -32,7 +32,7 @@ app.get(config.callbackURL, (req, res) => {
   })
 })
 
-// when the user is logged in then show the information
+// User Profile Information
 app.get('/profile', function(req, res) {
   axios({
     method: 'get',
@@ -47,7 +47,7 @@ app.get('/profile', function(req, res) {
   })
 });
 
-// remove the current access token and redirect to homepage
+// Logout the user and redirect to homepage
 app.get('/logout', (req, res) => {
   access_token = ""
   res.redirect('/');

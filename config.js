@@ -1,5 +1,5 @@
 module.exports = {
-    clientID: 'affaceee194bc083b881',
-    clientSecret: '0f918a6f4cfde6b8a410eff8462ba15100f2288b',
+    clientID: 'e38cf1efe5d5e54b6441',
+    clientSecret: '0dbeddc2b6307c906fd5aaf659c6885a38214a7b',
     callbackURL: '/auth/callback',
   };
